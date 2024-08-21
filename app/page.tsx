@@ -7,6 +7,8 @@ import { Footer } from "./components/footer";
 import { Hero } from "./components/hero";
 import { Vision } from "./components/vision";
 import { useEffect } from "react";
+import { Cards } from "./components/Cards";
+import { Team } from "./components/team";
 
 export default function Home() {
   useEffect(() => {
@@ -25,7 +27,7 @@ export default function Home() {
   return (
     <>
       <Navbar/>
-      <div className="parallax-bg bg-[url('https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-hostgator_chile-v1-0-2%2F002%2F92002%2F6edZL4Y3%2F30cc902f4b3945b9b788a8b778df5ac0&methods=resize%2C2000%2C5000')] bg-cover bg-center pb-0.5">
+      <div id="Main" className="parallax-bg bg-[url('https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-hostgator_chile-v1-0-2%2F002%2F92002%2F6edZL4Y3%2F30cc902f4b3945b9b788a8b778df5ac0&methods=resize%2C2000%2C5000')] bg-cover bg-center pb-0.5">
         <Hero/>
         <Vision/>
       </div>
@@ -33,8 +35,10 @@ export default function Home() {
         <Features/>
         <Faq/>
         <Cta/>
-        <Footer/>
+        <Cards/>
+        <Team/>
       </div>
+        <Footer/>
     </>
   );
 }
