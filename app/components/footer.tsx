@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
         <a
           className="inline-block rounded-full bg-teal-600 p-2 text-white shadow transition hover:bg-teal-500 sm:p-3 lg:p-4"
-          href="#Main"
+          href="#inicio"
         >
           <span className="sr-only">Back to top</span>
   

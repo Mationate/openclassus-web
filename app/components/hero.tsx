@@ -1,4 +1,40 @@
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+
 export const Hero = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, message }),
+      });
+      toast.success("Se envió un correo")
+
+      if (!response.ok) {
+        toast.error("Error");
+      }
+
+      setSuccess(true);
+    } catch (err) {
+      setError((err as Error).message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div
       className="h-screen w-full overflow-hidden bg-[url(https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2670&auto=format&fit=crop)] bg-cover bg-top bg-no-repeat"
@@ -12,16 +48,36 @@ export const Hero = () => {
             doloribus iure architecto quae voluptatum beatae excepturi dolores.
           </p>
 
-          <div className="mt-4 sm:mt-8">
-            <a
-              href="#"
-              className="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+          <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+            <input
+              type="email"
+              placeholder="Your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none"
+            />
+            <textarea
+              placeholder="Your message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+              className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none"
+            />
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="inline-block w-full rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
             >
-              Get Yours Today
-            </a>
-          </div>
+              {loading ? 'Sending...' : 'Send Message'}
+            </button>
+
+            {success && <p className="text-green-500">Message sent successfully!</p>}
+            {error && <p className="text-red-500">{error}</p>}
+          </form>
         </div>
       </div>
     </div>
   );
-}
+};
