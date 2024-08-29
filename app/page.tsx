@@ -9,6 +9,8 @@ import { Vision } from "./components/vision";
 import { useEffect } from "react";
 import { Cards } from "./components/cards";
 import { Team } from "./components/team";
+import ContactForm from "./components/contact";
+import Target from "./components/target";
 
 export default function Home() {
   useEffect(() => {
@@ -31,6 +33,7 @@ export default function Home() {
         <Hero/>
         <Vision/>
       </div>
+      <Target/>
       <div className="px-[20px] lg:container lg:px-20 mx-auto">
         <Features/>
         <Faq/>
@@ -38,7 +41,8 @@ export default function Home() {
         <Cards/>
         <Team/>
       </div>
-        <Footer/>
+      <ContactForm/>
+      <Footer/>
     </>
   );
 }

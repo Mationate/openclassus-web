@@ -1,21 +1,13 @@
 export const Vision = () => {
     return (
-      <div className="bg-white overflow-hidden rounded-lg  md:grid md:grid-cols-3 mt-12  mx-4 md:mx-10 mb-16">
-        <img
-          alt=""
-          src="https://images.unsplash.com/photo-1611510338559-2f463335092c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
-          className="h-32 w-full object-cover md:h-64"
-        />
-        <div className="p-4 text-center sm:p-6 md:col-span-2 lg:p-8 ">
-          <p className="text-sm font-semibold uppercase tracking-widest">Run with the pack</p>
-          <h2 className="mt-6 font-black uppercase">
-            <span className="text-4xl font-black sm:text-5xl lg:text-6xl"> Get 20% off </span>
-            <span className="mt-2 block text-sm">On your next order over $50</span>
-          </h2>
-          <p className="mt-8 text-xs font-medium uppercase text-gray-400">
-            Offer valid until 24th March, 2021 *
-          </p>
-        </div>
+      <div className="relative w-full overflow-hidden">
+        <div className="relative z-10 bg-white mx-4 my-8 md:mx-auto md:my-16 max-w-5xl p-8 rounded-lg shadow-lg">
+        <h3 className="text-lg md:text-xl text-gray-600 mb-2 text-center">Desbloquea tu potencial</h3>
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 text-center">Domina el desafío.</h2>
+        <p className="text-sm md:text-base text-gray-700 text-center leading-relaxed">
+          Con 'NOT A GAME' fomentamos la colaboración estratégica para enfrentar desafíos reales y complejos. A través de nuestra experiencia de juego, los participantes adquieren herramientas y habilidades que son esenciales para resolver problemas en una amplia gama de industrias. Este proceso no solo mejora su capacidad para enfrentar desafíos, sino que también los prepara para aplicar estos conocimientos de manera efectiva en su vida profesional, impulsando tanto su desarrollo personal como los resultados de las organizaciones.
+        </p>
+      </div>
       </div>
     );
   };
