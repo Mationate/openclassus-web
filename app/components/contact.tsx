@@ -41,10 +41,10 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="mx-auto p-16 bg-zinc-900 text-white">
+    <div id='contact' className="mx-auto p-16 bg-zinc-900 text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-4xl font-bold mb-4 text-yellow-400">¿Quieres contactarnos?</h2>
+          <h2 className="text-4xl font-bold mb-4 text-amber-400">¿Quieres contactarnos?</h2>
           <p className="mb-4">Escríbenos a hola@example.com o déjanos tus datos</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -71,7 +71,7 @@ export default function ContactForm() {
           <Button
             type="submit"
             disabled={loading}
-            className="w-full bg-yellow-400 text-black hover:bg-yellow-500 focus:ring-yellow-400"
+            className="w-full bg-amber-400 text-black hover:bg-yellow-500 focus:ring-amber-400"
           >
             {loading ? (
               <>

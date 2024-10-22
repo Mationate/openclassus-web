@@ -1,6 +1,6 @@
 export const Vision = () => {
     return (
-      <div className="relative w-full overflow-hidden">
+      <div id="start" className="relative w-full overflow-hidden">
         <div className="relative z-10 bg-white mx-4 my-8 md:mx-auto md:my-16 max-w-5xl p-8 rounded-lg shadow-lg">
         <h3 className="text-lg md:text-xl text-gray-600 mb-2 text-center">Desbloquea tu potencial</h3>
         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 text-center">Domina el desafío.</h2>
