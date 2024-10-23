@@ -1,6 +1,6 @@
 export const Cards = () => {
   return (
-    <div className="flex gap-x-4 mt-2">
+    <div className="flex gap-x-4 my-4">
     
     <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
         <img

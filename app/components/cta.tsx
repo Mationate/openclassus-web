@@ -12,7 +12,7 @@ export const Cta = () => {
   };
 
   return (
-    <div className="w-full rounded-[16px] bg-zinc-900 py-[56px] px-[32px] text-center lg:my-[60px] lg:px-[324px] lg:py-[89px]">
+    <div className="w-full rounded-[16px] bg-zinc-900 py-[56px] px-[32px] text-center my-4 lg:px-[324px] lg:py-[89px]">
       <h1 className="text-amber-400 text-[24px] font-medium lg:text-[48px] leading-[64px]">
         Transfórmate en un facilitador de la metodología Not A game
       </h1>
