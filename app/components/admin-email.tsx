@@ -2,71 +2,61 @@ import * as React from 'react';
 
 interface EmailTemplateProps {
   email: string | null;
-  message: string;
+  name: string | null;
+  phone: string | null;
+  business: string | null;
+  rut: string | null;
+  sessionName: string | null;
 }
 import {
   Body,
-  Button,
   Container,
   Head,
-  Hr,
   Html,
-  Img,
   Preview,
-  Section,
   Text,
 } from "@react-email/components";
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
-
-export const EmailTemplate = ({
+export const AdminEmail = ({
   email,
-  message
+  name,
+  phone,
+  business,
+  rut,
+  sessionName,
 }: EmailTemplateProps) => (
   <Html>
     <Head />
     <Preview>
-      The sales intelligence platform that helps you uncover qualified leads.
+      Nueva reserva
     </Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img
-          src={`${baseUrl}/static/koala-logo.png`}
-          width="170"
-          height="50"
-          alt="Koala"
-          style={logo}
-        />
-        <Text style={paragraph}>Hi {email},</Text>
         <Text style={paragraph}>
-          Gracias por reservar tu cupo, estaremos en contacto lo antes posible
+          Nombre: {name}
         </Text>
-        <Section style={btnContainer}>
-          <Button style={button} href="https://facilitator.openclassus.com">
-            Ver
-          </Button>
-        </Section>
         <Text style={paragraph}>
-          Saludos,
-          <br />
-          Equipo Openclassus
+          Rut: {rut}
         </Text>
-        <Hr style={hr} />
-        <Text style={footer}>
-          Santiago
+        <Text style={paragraph}>
+          Correo: {email}
+        </Text>
+        <Text style={paragraph}>
+          Teléfono: {phone}
+        </Text>
+        <Text style={paragraph}>
+          Empresa: {business}
+        </Text>
+        <Text style={paragraph}>
+          Reserva: {sessionName}
         </Text>
       </Container>
     </Body>
   </Html>
 );
 
-EmailTemplate.PreviewProps = {
-  email: "Alan",
-} as EmailTemplateProps;
 
-export default EmailTemplate;
+export default AdminEmail;
 
 const main = {
   backgroundColor: "#ffffff",

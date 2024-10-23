@@ -1,22 +1,27 @@
 [
     {
         "idx": 1,
-        "question":"1 ? ",
-        "answer":"lorem ipsum"
+        "question":"¿Qué es Not A game?",
+        "answer":"Not A Game es más que un juego: es un proceso de facilitación de aprendizaje gamificado diseñado para impulsar el desarrollo organizacional. A través de dinámicas interactivas y retos, se abordan procesos clave centrados en la resolución de problemas, la eficiencia, la innovación y la identificación de habilidades críticas. El enfoque está en potenciar el trabajo en equipo y optimizar procesos para fomentar el crecimiento de las personas dentro de la organización que les permita diseñar y crear la empresa del futuro."
     },
     {
         "idx": 2,
-        "question":"2 ? ",
-        "answer":"lorem ipsum"
+        "question":"¿Por qué debería ser facilitador de Not A game?",
+        "answer":"Not A game es una herramienta única que permite a los facilitadores transformar sesiones de aprendizaje en experiencias dinámicas e inmersivas. Al incorporar técnicas de resolución de problemas, creatividad o trabajo en equipo por ejemplo, los facilitadores pueden ayudar a los participantes a abordar desafíos reales y adaptarse a cambios organizacionales importantes. Al convertirte en facilitador, obtendrás no solo una metodología probada para potenciar el aprendizaje, sino también una forma innovadora de diferenciarte y ofrecer soluciones valiosas a empresas, organizaciones sociales y equipos en busca de desarrollo y crecimiento continuo.  Un facilitador  no solo aplica el juego de manera efectiva, sino que también personalizan las sesiones según las necesidades específicas del equipo con el cual trabaja o el contexto en el cual se desarrollan, garantizando que los aprendizajes sean relevantes y significativos para los participantes."
     },
     {
         "idx": 3,
-        "question":"3 ? ",
-        "answer":"lorem ipsum"
+        "question":"¿Qué habilidades desarrollan los participantes durante el juego?",
+        "answer":"Los participantes adquieren habilidades esenciales para el entorno empresarial moderno, como la capacidad de resolver problemas complejos, innovar en la creación de soluciones, trabajar eficazmente en equipos, y prepararse para cambios organizacionales. El juego también fomenta el pensamiento crítico, la adaptabilidad y la toma de decisiones en situaciones de incertidumbre."
     },
     {
         "idx": 4,
-        "question":"4 ? ",
-        "answer":"lorem ipsum"
+        "question":"¿Qué tipo de problemas o desafíos se pueden resolver con esta metodología?",
+        "answer":"La metodología está diseñada para abordar una amplia gama de problemas, desde la mejora de procesos internos, la adaptación a cambios organizacionales, hasta la creación de nuevos productos o servicios. Los desafíos pueden ser específicos o generales, permitiendo que los participantes apliquen las habilidades adquiridas en diferentes contextos, tanto a nivel organizacional como en proyectos personales o de equipo."
+    },
+    {
+        "idx": 5,
+        "question":"¿Qué obtengo con la facilitación?",
+        "answer":"Un certificado de “Facilitador Certificado” que te habilita para desarrollar procesos de aprendizaje con la metodología Not A game. Además adquieres un set de facilitación con todos los elementos y recursos para realizar tus propias sesiones o dinámicas de aprendizaje y obtienes acceso a una plataforma con más recursos y elementos como fichas técnicas, y tarjetas de habilidades, recursos de etiquetas de soluciones, tarjetas de eventos y desafíos. Esta plataforma actualiza sus contenidos de manera permanente, para que puedan ser usados por los facilitadores en cualquier momento."
     }
 ]

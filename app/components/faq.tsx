@@ -58,9 +58,19 @@ export default function Faq() {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center mx-auto px-4 py-12 bg-black">
-      <h2 className="text-4xl font-bold text-center mb-8 text-white">Preguntas Frecuentes</h2>
-      <div className="space-y-4 max-w-3xl w-full">
+    <div className="flex flex-col lg:flex-row items-center justify-center mx-auto px-4 py-12 bg-zinc-900">
+      <div className="lg:w-1/3 lg:py-[32px] lg:pr-[56px]">
+        <h3 className="text-white text-[14px] font-medium lg:text-base">
+          Preguntas frecuentes
+        </h3>
+        <h1 className="py-4 text-2xl font-medium text-amber-400 lg:text-[42px] lg:leading-[58px]">
+        Conviertete en facilitador de la metodología Not A game
+        </h1>
+        <p className="text-slate-400 pb-[24px]">
+        Ya seas un Consultor, Formador, Relator o líder de equipo en tu organización, te responemos algunas dudas de porque debes transformarte en un facilitador certificado.
+        </p>
+      </div>
+      <div className="lg:w-2/3 space-y-4 max-w-3xl w-full">
         {faqData.map((item) => (
           <FAQItem key={item.idx} item={item} />
         ))}

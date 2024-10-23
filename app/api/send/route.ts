@@ -1,3 +1,4 @@
+import AdminEmail from '@/app/components/admin-email';
 import { EmailTemplate } from '@/app/components/template-email';
 import { Resend } from 'resend';
 
@@ -5,20 +6,31 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { email, message } = await request.json();
+    const { name, email, phone, rut, empresa, session } = await request.json();
 
-    const { data, error } = await resend.emails.send({
+    // Send email to you
+    const adminEmail = await resend.emails.send({
       from: 'OpenClassus <noreply@facilitator.openclassus.com>',
       to: 'mofraga@3bslab.com',
-      subject: 'Nuevo mensaje de Facilitator OpenClassus',
-      react: EmailTemplate({ email, message }), 
+      subject: 'Nueva reserva facilitator.openclassus',
+      react: AdminEmail({ email: email, name: name, phone: phone, rut: rut, business: empresa, sessionName: session.title  }), 
     });
 
-    if (error) {
-      return new Response(JSON.stringify({ error }), { status: 500 });
-    }
+    // Email content for the user
+    const userMessage = `
+      Hola ${name},
+      Gracias por registrarte en ${session.title}. Nos pondremos en contacto contigo pronto.
+    `;
 
-    return new Response(JSON.stringify(data), { status: 200 });
+    // Send email to the user
+    const userEmail = await resend.emails.send({
+      from: 'OpenClassus <noreply@facilitator.openclassus.com>',
+      to: email,
+      subject: 'Gracias por tu reserva',
+      react: EmailTemplate({ email, message: userMessage }),
+    });
+
+    return new Response(JSON.stringify({ adminEmail, userEmail }), { status: 200 });
   } catch (error) {
     return new Response(JSON.stringify({ error: (error as Error).message }), { status: 500 });
   }

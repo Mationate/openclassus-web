@@ -13,7 +13,7 @@ export const Hero = () => {
         <div className="text-left">
           <h2 className="text-2xl font-bold text-amber-400 sm:text-3xl md:text-5xl">NOT A GAME</h2>
 
-          <p className="hidden max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">
+          <p className="max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">
           Not a Game es un proceso de facilitación, un catalizador de aprendizaje dinámico y colaborativo, diseñado para desafiar a los equipos a desarrollar soluciones innovadoras o buscar la eficiencia en los equipos de trabajo. Nos apasiona fomentar el liderazgo, la creatividad y la estrategia, transformando cada sesión en una experiencia práctica que va más allá del juego.
           </p>
 
