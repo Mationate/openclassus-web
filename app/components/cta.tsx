@@ -1,4 +1,4 @@
-import { ArrowBigDown, ArrowDownCircle } from 'lucide-react';
+import { ArrowDownCircle, ArrowDown, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 export const Cta = () => {
@@ -20,13 +20,16 @@ export const Cta = () => {
         Selecciona una fecha y reserva tu cupo
       </p>
 
-      <div className="mt-[40px] flex flex-col w-full items-center lg:mt-[56px] lg:flex-row lg:justify-center gap-x-[40px]">
-        <a
-          href='/fechas'
-          className="py-[16px] px-[32px] bg-amber-400 rounded-[8px] text-zinc-900 w-fit font-medium transition duration-300 hover:bg-color3bs hover:text-white"
-        >
-          Reserva
-        </a>
+      <div className="mt-[40px] flex flex-col w-full items-center lg:mt-[56px] lg:flex-row lg:justify-center gap-x-[40px] relative">
+        <div className="relative">
+          <ChevronDown className="absolute -top-12 left-1/2 mb-2 transform -translate-x-1/2 text-amber-400 w-8 h-8 animate-bounce" />
+          <a
+            href='/fechas'
+            className="py-[20px] px-[40px] bg-amber-400 rounded-[12px] text-zinc-900 w-fit font-bold text-xl shadow-lg transition duration-300 hover:bg-amber-500 hover:text-white hover:scale-105 hover:shadow-xl lg:text-2xl lg:py-[24px] lg:px-[48px]"
+          >
+            Reserva Ahora
+          </a>
+        </div>
         <div
           className="flex w-full lg:w-auto items-center justify-center mt-[32px] lg:mt-0"
           data-aos="fade-up"
@@ -36,7 +39,7 @@ export const Cta = () => {
             onClick={handleScrollToContact}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="flex items-center gap-x-3 text-amber-400 font-medium transition duration-300 hover:text-color3bs"
+            className="flex items-center gap-x-3 text-amber-400 font-medium transition duration-300 hover:text-amber-500"
           >
             Necesito + info{" "}
             <span

@@ -17,7 +17,7 @@ export default function Target() {
     }
   }
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div id='target' className="relative w-full h-screen overflow-hidden">
       {/* Background video */}
       <div className="absolute inset-0 w-full h-full">
         <video
